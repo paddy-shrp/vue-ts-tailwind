@@ -1,6 +1,142 @@
-# vue-project
+# Deepsite + Vercel - Vue 3 + Vite Project
 
-This template should help get you started developing with Vue 3 in Vite.
+A modern Vue 3 + Vite project showcasing the integration of AI-generated websites with Vue.js and Vercel deployment.
+
+## 🚀 Features
+
+- **Vue 3** with Composition API and `<script setup>` syntax
+- **Vite** for lightning-fast development and building
+- **TypeScript** for type safety
+- **Tailwind CSS** for utility-first styling
+- **Vue Router** for client-side routing
+- **Font Awesome** icons
+- **Responsive design** with mobile-first approach
+
+## 📁 Project Structure
+
+```
+src/
+├── components/          # Vue components
+│   ├── Header.vue      # Navigation component
+│   ├── Footer.vue      # Footer component
+│   ├── HeroSection.vue # Hero banner section
+│   ├── ProcessSection.vue # Step-by-step process
+│   ├── CTASection.vue  # Call-to-action section
+│   └── AboutSection.vue # About page content
+├── pages/              # Page components
+│   ├── Home.vue        # Home page
+│   └── About.vue       # About page
+├── router/             # Vue Router configuration
+├── assets/             # Static assets and styles
+│   ├── main.css        # Main CSS with Tailwind imports
+│   ├── custom.css      # Custom styles and animations
+│   └── base.css        # Base styles
+└── main.ts             # Application entry point
+```
+
+## 🛠️ Development
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development Server
+
+```bash
+npm run dev
+```
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## 🎨 Styling
+
+- **Tailwind CSS v4** for utility classes
+- **Custom CSS** for animations and specific styles
+- **CSS Variables** for consistent theming
+- **Responsive design** with mobile-first approach
+
+## 📱 Components
+
+### Header.vue
+
+- Responsive navigation with mobile menu
+- Vue Router integration for page navigation
+- Active state styling
+
+### HeroSection.vue
+
+- Gradient background with animated blobs
+- Terminal demo with animated code lines
+- Call-to-action buttons
+
+### ProcessSection.vue
+
+- Step-by-step process cards with hover animations
+- Terminal code example with staggered animations
+- Detailed guide with numbered steps
+
+### CTASection.vue
+
+- Call-to-action with gradient background
+- External links to Deepsite and Vercel
+
+### AboutSection.vue
+
+- About page content with illustration placeholder
+- Feature highlights with icons
+- Vision statement and team quote
+
+### Footer.vue
+
+- Comprehensive footer with links
+- Resource and connect sections
+- Branding with gradient logo
+
+## 🔧 Customization
+
+### Colors
+
+Custom colors are defined in `src/assets/custom.css`:
+
+- `--color-primary`: #6366f1 (indigo)
+- `--color-secondary`: #8b5cf6 (violet)
+- `--color-dark`: #1e293b (slate)
+
+### Animations
+
+- Blob animations for hero section
+- Fade-in animations for code lines
+- Hover effects for step cards
+- Smooth page transitions
+
+## 🚀 Deployment
+
+This project is optimized for deployment on Vercel:
+
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy with zero configuration
+
+## 📄 License
+
+MIT License - feel free to use this project as a starting point for your own applications.
 
 ## Recommended IDE Setup
 
