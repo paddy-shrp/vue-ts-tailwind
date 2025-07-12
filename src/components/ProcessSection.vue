@@ -68,28 +68,40 @@
                                 <code class="bg-gray-100 px-2 py-1 rounded">/examples</code> folder
                             </li>
                             <li>
-                                Convert the static HTML into Vue components (e.g.,
-                                <code class="bg-gray-100 px-2 py-1 rounded">&lt;HeroSection.vue&gt;</code>,
-                                <code class="bg-gray-100 px-2 py-1 rounded">&lt;StepSection.vue&gt;</code>)
+                                Setup the project with the commands on the right
                             </li>
                             <li>
-                                Set up Vue.js + Vite project:
-                                <code
-                                    class="bg-gray-100 px-2 py-1 rounded">npm init vite@latest my-site -- --template vue</code>
+                                Convert it using <a href="https://cursor.com/agents/"
+                                    class="text-primary hover:underline" target="_blank">Cursor</a> with the following
+                                Agent prompt:
+                                <div class="mt-3 p-4 bg-gray-50 rounded-lg border-l-4 border-primary">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <p class="text-sm font-medium text-gray-700">Cursor Agent Prompt:</p>
+                                        <button @click="copyAgentPrompt"
+                                            class="text-xs px-3 py-1 bg-primary text-white rounded hover:bg-primary-dark hover:cursor-pointer transition-colors flex items-center gap-1"
+                                            :class="{ 'bg-green-600': copySuccess }">
+                                            <span v-if="copySuccess">✓ Copied!</span>
+                                            <span v-else>Copy</span>
+                                        </button>
+                                    </div>
+                                    <details class="text-sm text-gray-600">
+                                        <summary
+                                            class="cursor-pointer font-medium text-primary hover:text-primary-dark">
+                                            Click to expand agent prompt
+                                        </summary>
+                                        <div class="mt-2 space-y-2 whitespace-pre-line">{{ agentPrompt }}</div>
+                                    </details>
+                                </div>
                             </li>
                             <li>
-                                Integrate HTML into Vue views using
-                                <code class="bg-gray-100 px-2 py-1 rounded">&lt;template&gt;</code>,
-                                <code class="bg-gray-100 px-2 py-1 rounded">&lt;script setup&gt;</code>
-                                and scoped styles
+                                Test it now with <code class="bg-gray-100 px-2 py-1 rounded">npm run dev</code> and try
+                                <code class="bg-gray-100 px-2 py-1 rounded">npm run build</code>
                             </li>
                             <li>
                                 Deploy to
                                 <a href="https://vercel.com" class="text-primary hover:underline"
                                     target="_blank">Vercel</a>
-                                (free tier, scales with traffic)
                             </li>
-                            <li>Add analytics using Plausible or Google Analytics</li>
                         </ol>
                     </div>
                     <div class="md:w-1/2 bg-gray-900 text-white">
@@ -104,22 +116,19 @@
                             </div>
                             <div class="terminal-content p-4">
                                 <div class="code-line text-green-400">
-                                    $ git clone https://github.com/your-username/your-repo.git
+                                    $ git clone https://github.com/paddy-shrp/vue-ts-tailwind-supabase.git
                                 </div>
-                                <div class="code-line mb-3 text-green-400">$ cd your-repo</div>
+                                <div class="code-line mb-3 text-green-400">$ cd vue-ts-tailwind-supabase</div>
                                 <div class="code-line mb-3 text-green-400">$ npm install</div>
                                 <div class="code-line mb-3 text-green-400">$ npm run dev</div>
                                 <div class="code-line mb-3 text-gray-400">
-                                    # Local server running at http://localhost:3000
+                                    # Local server running at http://localhost:5173
                                 </div>
                                 <div class="code-line mb-3 text-green-400">$ git add .</div>
                                 <div class="code-line mb-3 text-green-400">
                                     $ git commit -m "Initial commit"
                                 </div>
                                 <div class="code-line mb-3 text-green-400">$ git push origin main</div>
-                                <div class="code-line mt-6 text-blue-400">
-                                    # Then connect to GitHub → Import to Vercel → Deploy!
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -128,3 +137,32 @@
         </div>
     </section>
 </template>
+
+<script setup lang="ts">
+import { ref, onMounted } from 'vue';
+
+const agentPrompt = ref('');
+const copySuccess = ref(false);
+
+const copyAgentPrompt = async () => {
+    try {
+        await navigator.clipboard.writeText(agentPrompt.value);
+        copySuccess.value = true;
+        setTimeout(() => {
+            copySuccess.value = false;
+        }, 2000);
+    } catch (error) {
+        console.error('Failed to copy text:', error);
+    }
+};
+
+onMounted(async () => {
+    try {
+        const textModule = await import('../assets/agent-prompt.txt?raw');
+        agentPrompt.value = textModule.default;
+    } catch (error) {
+        console.error('Failed to load agent prompt:', error);
+        agentPrompt.value = 'Failed to load agent prompt';
+    }
+});
+</script>
