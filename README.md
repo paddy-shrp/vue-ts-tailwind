@@ -9,6 +9,7 @@ A modern Vue 3 + Vite project showcasing the integration of AI-generated website
 - **TypeScript** for type safety
 - **Tailwind CSS** for utility-first styling
 - **Vue Router** for client-side routing
+- **Supabase** for authentication, database, and real-time features
 - **Font Awesome** icons
 - **Responsive design** with mobile-first approach
 
@@ -22,11 +23,22 @@ src/
 │   ├── HeroSection.vue # Hero banner section
 │   ├── ProcessSection.vue # Step-by-step process
 │   ├── CTASection.vue  # Call-to-action section
-│   └── AboutSection.vue # About page content
+│   ├── AboutSection.vue # About page content
+│   └── auth/           # Authentication components
+│       ├── LoginForm.vue
+│       └── RegisterForm.vue
 ├── pages/              # Page components
 │   ├── Home.vue        # Home page
-│   └── About.vue       # About page
+│   ├── About.vue       # About page
+│   └── auth/           # Authentication pages
+│       ├── Login.vue
+│       └── Register.vue
 ├── router/             # Vue Router configuration
+├── composables/        # Vue composables
+│   ├── useAuth.ts      # Authentication logic
+│   └── useDatabase.ts  # Database operations
+├── services/           # External services
+│   └── supabase.ts     # Supabase client configuration
 ├── assets/             # Static assets and styles
 │   ├── main.css        # Main CSS with Tailwind imports
 │   ├── custom.css      # Custom styles and animations
@@ -46,6 +58,17 @@ src/
 ```bash
 npm install
 ```
+
+### Supabase Setup
+
+1. Create a Supabase project at [supabase.com](https://supabase.com)
+2. Copy your project URL and anon key from Settings > API
+3. Create a `.env` file in the root directory:
+   ```env
+   VITE_SUPABASE_URL=your_supabase_project_url
+   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
+4. Follow the database setup instructions in [SUPABASE_SETUP.md](./SUPABASE_SETUP.md)
 
 ### Development Server
 
