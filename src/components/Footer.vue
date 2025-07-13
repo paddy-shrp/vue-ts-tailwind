@@ -43,15 +43,12 @@
                         <h4 class="text-lg font-semibold mb-4">Connect</h4>
                         <ul class="space-y-2">
                             <li>
-                                <a href="https://github.com" target="_blank"
+                                <a href="https://github.com/paddy-shrp" target="_blank"
                                     class="text-gray-400 hover:text-white transition">GitHub</a>
                             </li>
                             <li>
-                                <a href="https://twitter.com" target="_blank"
-                                    class="text-gray-400 hover:text-white transition">Twitter</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-gray-400 hover:text-white transition">Documentation</a>
+                                <a href="https://linkedin.com/in/patrick-schroeppel" target="_blank"
+                                    class="text-gray-400 hover:text-white transition">LinkedIn</a>
                             </li>
                         </ul>
                     </div>

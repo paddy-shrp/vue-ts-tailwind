@@ -2,9 +2,9 @@
     <section id="process" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Simple & Efficient Process</h2>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Build Your Frontend in Minutes</h2>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                    From AI-generated HTML to live deployment in minutes
+                    Skip the setup hassle. Get a production-ready Vue 3 frontend running in under 5 minutes
                 </p>
             </div>
 
@@ -13,10 +13,9 @@
                     <div class="w-12 h-12 rounded-lg gradient-bg flex items-center justify-center text-white mb-4">
                         <span class="text-xl font-bold">1</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Generate with Deepsite</h3>
+                    <h3 class="text-xl font-semibold mb-2">Clone Template</h3>
                     <p class="text-gray-600">
-                        Define your website content and generate the raw HTML structure using Deepsite
-                        AI.
+                        One command to get a fully configured Vue 3 + TypeScript + Tailwind project
                     </p>
                 </div>
 
@@ -24,10 +23,9 @@
                     <div class="w-12 h-12 rounded-lg gradient-bg flex items-center justify-center text-white mb-4">
                         <span class="text-xl font-bold">2</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Setup Vue Project</h3>
+                    <h3 class="text-xl font-semibold mb-2">Start Developing</h3>
                     <p class="text-gray-600">
-                        Create a new Vue.js + Vite project and copy the generated HTML into your
-                        project.
+                        Run the dev server and start building your components immediately
                     </p>
                 </div>
 
@@ -35,10 +33,9 @@
                     <div class="w-12 h-12 rounded-lg gradient-bg flex items-center justify-center text-white mb-4">
                         <span class="text-xl font-bold">3</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Convert to Components</h3>
+                    <h3 class="text-xl font-semibold mb-2">Customize & Build</h3>
                     <p class="text-gray-600">
-                        Transform static HTML into Vue components with scoped styles and reactive
-                        features.
+                        Add your content, customize styles, and build for production
                     </p>
                 </div>
 
@@ -46,9 +43,9 @@
                     <div class="w-12 h-12 rounded-lg gradient-bg flex items-center justify-center text-white mb-4">
                         <span class="text-xl font-bold">4</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Deploy to Vercel</h3>
+                    <h3 class="text-xl font-semibold mb-2">Deploy Instantly</h3>
                     <p class="text-gray-600">
-                        Deploy your site to Vercel with one click and add analytics for insights.
+                        Deploy to Vercel, Netlify, or any platform with zero configuration
                     </p>
                 </div>
             </div>
@@ -56,24 +53,25 @@
             <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
                 <div class="md:flex">
                     <div class="md:w-1/2 p-8 md:p-12">
-                        <h3 class="text-2xl font-bold mb-4">Step-by-Step Guide</h3>
+                        <h3 class="text-2xl font-bold mb-4">Complete Workflow</h3>
                         <ol class="list-decimal pl-5 space-y-4 text-gray-700">
                             <li>
-                                Build context → Define Website Content → Generate Raw Structure with
+                                <strong>Generate with Deepsite:</strong> Build context → Define Website Content →
+                                Generate Raw Structure with
                                 <a href="https://huggingface.co/spaces/enzostvs/deepsite"
                                     class="text-primary hover:underline" target="_blank">Deepsite</a>
                             </li>
                             <li>
-                                Copy the generated HTML into the
+                                <strong>Setup Project:</strong> Clone the template with the commands on the right
+                            </li>
+                            <li>
+                                <strong>Prepare Content:</strong> Copy the generated HTML into the
                                 <code class="bg-gray-100 px-2 py-1 rounded">/examples</code> folder
                             </li>
                             <li>
-                                Setup the project with the commands on the right
-                            </li>
-                            <li>
-                                Convert it using <a href="https://cursor.com/agents/"
-                                    class="text-primary hover:underline" target="_blank">Cursor</a> with the following
-                                Agent prompt:
+                                <strong>Convert with Cursor:</strong> Use <a href="https://cursor.com/agents/"
+                                    class="text-primary hover:underline" target="_blank">Cursor</a> with this Agent
+                                prompt:
                                 <div class="mt-3 p-4 bg-gray-50 rounded-lg border-l-4 border-primary">
                                     <div class="flex justify-between items-center mb-2">
                                         <p class="text-sm font-medium text-gray-700">Cursor Agent Prompt:</p>
@@ -94,11 +92,12 @@
                                 </div>
                             </li>
                             <li>
-                                Test it now with <code class="bg-gray-100 px-2 py-1 rounded">npm run dev</code> and try
+                                <strong>Test & Build:</strong> Run <code
+                                    class="bg-gray-100 px-2 py-1 rounded">npm run dev</code> and try
                                 <code class="bg-gray-100 px-2 py-1 rounded">npm run build</code>
                             </li>
                             <li>
-                                Deploy to
+                                <strong>Deploy:</strong> Deploy to
                                 <a href="https://vercel.com" class="text-primary hover:underline"
                                     target="_blank">Vercel</a>
                             </li>
@@ -115,15 +114,16 @@
                                 <span class="text-sm">bash</span>
                             </div>
                             <div class="terminal-content p-4">
-                                <div class="code-line text-green-400">
-                                    $ git clone https://github.com/paddy-shrp/vue-ts-tailwind-supabase.git
+                                <div class="code-line mb-3 text-green-400">
+                                    $ npx degit paddy-shrp/vue-ts-tailwind my-project
                                 </div>
-                                <div class="code-line mb-3 text-green-400">$ cd vue-ts-tailwind-supabase</div>
+                                <div class="code-line mb-3 text-green-400">$ cd my-project</div>
                                 <div class="code-line mb-3 text-green-400">$ npm install</div>
                                 <div class="code-line mb-3 text-green-400">$ npm run dev</div>
                                 <div class="code-line mb-3 text-gray-400">
                                     # Local server running at http://localhost:5173
                                 </div>
+                                <div class="code-line mb-3 text-green-400">$ git init</div>
                                 <div class="code-line mb-3 text-green-400">$ git add .</div>
                                 <div class="code-line mb-3 text-green-400">
                                     $ git commit -m "Initial commit"
