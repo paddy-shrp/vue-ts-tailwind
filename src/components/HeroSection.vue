@@ -1,45 +1,96 @@
 <template>
-    <section class="gradient-bg text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0">
-                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
-                        Launch Your Site Fast with Deepsite & Vercel
+    <section class="relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary via-purple-600 to-secondary-dark"></div>
+        <div class="absolute inset-0 opacity-40">
+            <div class="absolute top-0 left-0 w-full h-full"
+                style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 50px 50px;">
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6 text-white drop-shadow-lg">
+                        Build Professional Frontends Instantly
                     </h1>
-                    <p class="text-xl mb-8 opacity-90">
-                        Generate beautiful websites in seconds using AI, then deploy instantly with
-                        Vercel's powerful platform.
+                    <p class="text-xl mb-8 opacity-90 text-white/90 drop-shadow-md">
+                        See the complete process of creating stunning frontends with AI tools and deploying them
+                        instantly.
+                        This site demonstrates the Instant Frontend workflow using our Vue 3 + TypeScript + Tailwind
+                        template.
                     </p>
                     <div class="flex flex-wrap gap-4">
                         <a href="#process"
-                            class="bg-white text-primary font-medium px-6 py-3 rounded-lg hover:bg-gray-100 transition">Get
-                            Started</a>
-                        <a href="https://vercel.com" target="_blank"
-                            class="border-2 border-white text-white font-medium px-6 py-3 rounded-lg hover:bg-white/10 transition">Deploy
-                            on Vercel</a>
+                            class="bg-white/20 backdrop-blur-sm text-white font-medium px-6 py-3 rounded-lg hover:bg-white/30 transition-all duration-300 border border-white/30 shadow-lg hover:shadow-xl">
+                            See the Process
+                        </a>
+                        <a href="https://github.com/paddy-shrp/vue-ts-tailwind" target="_blank"
+                            class="border-2 border-white/50 text-white font-medium px-6 py-3 rounded-lg hover:bg-white/10 transition-all duration-300 flex items-center gap-2 backdrop-blur-sm shadow-lg hover:shadow-xl">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            Get the Template
+                        </a>
                     </div>
                 </div>
                 <div class="md:w-1/2 flex justify-center">
                     <div class="relative">
-                        <div
-                            class="absolute -top-6 -left-6 w-32 h-32 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob">
-                        </div>
-                        <div
-                            class="absolute -bottom-6 -right-6 w-32 h-32 bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000">
-                        </div>
-                        <div class="relative bg-white rounded-2xl shadow-xl p-6 w-full max-w-md">
-                            <div class="flex mb-4">
-                                <div class="terminal-dot bg-red-400"></div>
-                                <div class="terminal-dot bg-yellow-400"></div>
-                                <div class="terminal-dot bg-green-400"></div>
+                        <div class="relative flex flex-col items-start justify-center space-y-8">
+                            <!-- Step 1: Generate -->
+                            <div class="flex items-center space-x-4 group">
+                                <div
+                                    class="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white font-bold text-lg shadow-2xl aspect-square border border-white/30">
+                                    1
+                                </div>
+                                <div>
+                                    <span
+                                        class="text-white font-semibold text-base block mb-1 drop-shadow-md">Generate</span>
+                                    <span class="text-white/80 text-sm drop-shadow-sm">Use Deepsite AI to generate your
+                                        frontend's HTML
+                                        structure in seconds.</span>
+                                </div>
                             </div>
-                            <div class="text-gray-800 font-mono text-sm">
-                                <p class="mb-2">
-                                    <span class="text-green-500">$</span> deepsite generate
-                                </p>
-                                <p class="mb-2">Building context...</p>
-                                <p class="mb-2">Generating HTML structure...</p>
-                                <p class="text-primary font-medium">✓ Website generated in 12.3s</p>
+
+                            <!-- Arrow -->
+                            <div class="flex flex-col items-center ml-8">
+                                <div class="w-0.5 h-8 bg-white/60 animate-pulse"></div>
+                            </div>
+
+                            <!-- Step 2: Develop -->
+                            <div class="flex items-center space-x-4 group">
+                                <div
+                                    class="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white font-bold text-lg shadow-2xl aspect-square border border-white/30">
+                                    2
+                                </div>
+                                <div>
+                                    <span
+                                        class="text-white font-semibold text-base block mb-1 drop-shadow-md">Develop</span>
+                                    <span class="text-white/80 text-sm drop-shadow-sm">Refine, style, and enhance your
+                                        frontend with
+                                        Vue 3, TypeScript, and Tailwind CSS.</span>
+                                </div>
+                            </div>
+
+                            <!-- Arrow -->
+                            <div class="flex flex-col items-center ml-8">
+                                <div class="w-0.5 h-8 bg-white/60 animate-pulse"></div>
+                            </div>
+
+                            <!-- Step 3: Deploy -->
+                            <div class="flex items-center space-x-4 group">
+                                <div
+                                    class="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white font-bold text-lg shadow-2xl aspect-square border border-white/30">
+                                    3
+                                </div>
+                                <div>
+                                    <span
+                                        class="text-white font-semibold text-base block mb-1 drop-shadow-md">Deploy</span>
+                                    <span class="text-white/80 text-sm drop-shadow-sm">Launch your frontend instantly to
+                                        Vercel or your
+                                        favorite platform.</span>
+                                </div>
                             </div>
                         </div>
                     </div>

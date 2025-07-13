@@ -1,10 +1,13 @@
 <template>
     <section id="process" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Build Your Frontend in Minutes</h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                    Skip the setup hassle. Get a production-ready Vue 3 frontend running in under 5 minutes
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    Build Your Frontend in Minutes
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Skip the setup hassle. Get a production-ready Vue 3 frontend running in under 5 minutes with our
+                    Instant Frontend workflow.
                 </p>
             </div>
             <div class="bg-white rounded-2xl shadow-lg overflow-hidden">

@@ -1,6 +1,9 @@
 <template>
-    <section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="relative py-20 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50"></div>
+
+        <!-- Content -->
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                     Ready to Build Something Amazing?
@@ -33,11 +36,9 @@
                     <h3 class="text-xl font-semibold mb-2">Production Ready</h3>
                     <p class="text-gray-600">Built with best practices and ready for deployment to any platform.</p>
                 </div>
-
-
             </div>
 
-            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+            <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 md:p-12 border border-white/20">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                     <div>
                         <h3 class="text-2xl font-bold mb-4">Start Building Today</h3>
@@ -106,7 +107,7 @@
                 </p>
                 <div class="flex justify-center space-x-8">
                     <a href="https://github.com/paddy-shrp" target="_blank" rel="noopener"
-                        class="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                        class="flex flex-col items-center p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/20"
                         aria-label="GitHub">
                         <svg class="w-12 h-12 text-gray-800 mb-3" fill="currentColor" viewBox="0 0 24 24">
                             <path
@@ -116,7 +117,7 @@
                         <span class="text-sm text-gray-600 mt-1">@paddy-shrp</span>
                     </a>
                     <a href="https://linkedin.com/in/patrick-schroeppel" target="_blank" rel="noopener"
-                        class="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                        class="flex flex-col items-center p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/20"
                         aria-label="LinkedIn">
                         <svg class="w-12 h-12 text-blue-600 mb-3" fill="currentColor" viewBox="0 0 24 24">
                             <path
