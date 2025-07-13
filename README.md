@@ -3,7 +3,7 @@
 A modern Vue 3 project with TypeScript, Tailwind CSS, and Vite for rapid frontend development.
 
 For a visual walkthrough and live showcase of this template, check out the tutorial site:  
-[Open in new tab](https://vue-ts-tailwind-frontend.vercel.app/)
+https://vue-ts-tailwind-frontend.vercel.app/
 
 ## 🚀 Quick Start
 
