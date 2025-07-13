@@ -1,10 +1,10 @@
 <template>
-    <footer
-        class="relative bg-gradient-to-br from-pink-700 via-purple-800 to-secondary-dark text-white py-12 overflow-hidden">
-        <!-- Background Pattern -->
+    <footer class="relative text-white py-12 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-secondary-light to-secondary-dark"></div>
+
         <div class="absolute inset-0 opacity-20">
-            <div
-                class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:20px_20px]">
+            <div class="absolute top-0 left-0 w-full h-full"
+                style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 50px 50px;">
             </div>
         </div>
 
@@ -16,7 +16,7 @@
                     <a href="/" class="block group">
                         <div class="flex items-center justify-center lg:justify-start">
                             <div
-                                class="bg-gradient-to-r from-pink-400 to-purple-500 p-1 rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
+                                class="bg-gradient-to-r from-primary to-secondary p-1 rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
                                 <div class="bg-white/10 backdrop-blur-sm p-1 rounded-md">
                                     <span
                                         class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-200 to-purple-200 text-xl">Instant
@@ -77,13 +77,9 @@
             </div>
 
             <!-- Copyright Section -->
-            <div class="mt-12 pt-8 border-t border-pink-400/30 text-center text-pink-200 backdrop-blur-sm">
+            <div class="mt-4 pt-8 text-center text-pink-200 backdrop-blur-sm">
                 <p>© {{ new Date().getFullYear() }} Instant Frontend. All rights reserved.</p>
             </div>
         </div>
     </footer>
 </template>
-
-<script setup lang="ts">
-// Footer component logic
-</script>
