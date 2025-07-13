@@ -7,49 +7,6 @@
                     Skip the setup hassle. Get a production-ready Vue 3 frontend running in under 5 minutes
                 </p>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-                <div class="step-card bg-white rounded-xl p-6 shadow-md border border-gray-100">
-                    <div class="w-12 h-12 rounded-lg gradient-bg flex items-center justify-center text-white mb-4">
-                        <span class="text-xl font-bold">1</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Clone Template</h3>
-                    <p class="text-gray-600">
-                        One command to get a fully configured Vue 3 + TypeScript + Tailwind project
-                    </p>
-                </div>
-
-                <div class="step-card bg-white rounded-xl p-6 shadow-md border border-gray-100">
-                    <div class="w-12 h-12 rounded-lg gradient-bg flex items-center justify-center text-white mb-4">
-                        <span class="text-xl font-bold">2</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Start Developing</h3>
-                    <p class="text-gray-600">
-                        Run the dev server and start building your components immediately
-                    </p>
-                </div>
-
-                <div class="step-card bg-white rounded-xl p-6 shadow-md border border-gray-100">
-                    <div class="w-12 h-12 rounded-lg gradient-bg flex items-center justify-center text-white mb-4">
-                        <span class="text-xl font-bold">3</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Customize & Build</h3>
-                    <p class="text-gray-600">
-                        Add your content, customize styles, and build for production
-                    </p>
-                </div>
-
-                <div class="step-card bg-white rounded-xl p-6 shadow-md border border-gray-100">
-                    <div class="w-12 h-12 rounded-lg gradient-bg flex items-center justify-center text-white mb-4">
-                        <span class="text-xl font-bold">4</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Deploy Instantly</h3>
-                    <p class="text-gray-600">
-                        Deploy to Vercel, Netlify, or any platform with zero configuration
-                    </p>
-                </div>
-            </div>
-
             <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
                 <div class="md:flex">
                     <div class="md:w-1/2 p-8 md:p-12">
