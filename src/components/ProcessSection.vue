@@ -32,7 +32,7 @@
                 <strong>Convert with Cursor:</strong> Use
                 <a href="https://cursor.com/agents/" class="text-primary hover:underline" target="_blank">Cursor</a>
                 with this Agent prompt:
-                <div class="mt-3 p-4 bg-surface rounded-lg border-l-4 border-primary border border-border">
+                <div class="mt-3 p-4 bg-surface rounded-lg border-l-4 border-primary border">
                   <div class="flex justify-between items-center mb-2">
                     <p class="text-sm font-medium text-foreground">Cursor Agent Prompt:</p>
                     <button @click="copyAgentPrompt"
