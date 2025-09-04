@@ -48,9 +48,60 @@ src/
 - **Vite** for fast development
 - **Responsive design**
 
+## 🐳 Docker Support
+
+This project includes full Docker support for both development and production environments.
+
+### Development with Docker
+
+```bash
+# Start development server in Docker
+docker-compose --profile dev up --build
+
+# Or run individual commands
+docker build -f Dockerfile.dev -t vue-app-dev .
+docker run -p 5173:5173 -v $(pwd):/app vue-app-dev
+```
+
+### Production with Docker
+
+```bash
+# Build and run production container
+docker-compose --profile prod up --build
+
+# Or run individual commands
+docker build -t vue-app .
+docker run -p 80:80 vue-app
+
+# Run on custom port
+docker run -p 3000:80 vue-app
+```
+
+### Docker Commands
+
+```bash
+# Build production image
+docker build -t vue-app .
+
+# Build development image
+docker build -f Dockerfile.dev -t vue-app-dev .
+
+# Run production container
+docker run -p 80:80 vue-app
+
+# Run development container
+docker run -p 5173:5173 -v $(pwd):/app vue-app-dev
+
+# Stop all containers
+docker-compose down
+
+# View logs
+docker-compose logs -f
+```
+
 ## 🚀 Deployment
 
-Deploy to Vercel, Netlify, or any platform with zero configuration.
+Deploy to Vercel, Netlify, or any platform with zero configuration. For containerized deployments, use the provided Dockerfile with any container orchestration platform like Kubernetes, Docker Swarm, or cloud container services.
 
 ## 📄 License
 

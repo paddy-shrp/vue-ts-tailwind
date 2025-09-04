@@ -1,0 +1,27 @@
+{
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "package.json": "package-lock.json, pnpm-lock.yaml, yarn.lock, .npmrc",
+    "tsconfig.json": "tsconfig.*.json, tsconfig.node.json, tsconfig.app.json",
+    ".env": ".env.*, .env.development, .env.production",
+    ".gitignore": ".dockerignore, .prettierignore, .eslintignore",
+    "vite.config.ts": "*.config.js, .prettierrc*, .eslintrc*, postcss.config.*",
+    "index.html": "favicon.ico, robots.txt, site.webmanifest",
+    "Dockerfile": "Dockerfile.*, docker-compose.yml, nginx.conf",
+    "README.md": "LICENSE*, CHANGELOG*, CONTRIBUTING*"
+  },
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.git": true,
+    "**/.DS_Store": true
+  },
+  "workbench.tree.indent": 12,
+  "workbench.tree.renderIndentGuides": "always",
+  "explorer.compactFolders": false,
+  "explorer.sortOrder": "type",
+  "workbench.colorCustomizations": {
+    "tree.indentGuidesStroke": "#4f4f4f"
+  }
+}
