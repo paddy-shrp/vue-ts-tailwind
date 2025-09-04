@@ -10,7 +10,7 @@ You are working in a Vue 3 + Vite project. Take the provided static HTML file an
 2. **CSS Extraction**
    - If styles are defined inline or via `<style>` tags in the HTML, extract and place them in either:
      - Scoped `<style scoped>` blocks inside each Vue component
-     - Or global styles (`src/assets/styles.css`) if shared across components
+     - Or global styles (`src/assets/main.css`) if shared across components
    - If Tailwind is used, remove redundant custom styles where utility classes suffice.
 
 3. **Integration**

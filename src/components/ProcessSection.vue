@@ -62,29 +62,29 @@
             </ol>
           </div>
           <div class="md:w-1/2 bg-gray-900 text-white">
-            <div class="terminal h-full">
-              <div class="terminal-header p-4 flex items-center">
+            <div class="bg-dark rounded-lg font-mono h-full">
+              <div class="bg-dark-light rounded-t-lg p-4 flex items-center">
                 <div class="flex mr-3">
-                  <div class="terminal-dot bg-red-400"></div>
-                  <div class="terminal-dot bg-yellow-400"></div>
-                  <div class="terminal-dot bg-green-400"></div>
+                  <div class="w-3 h-3 rounded-full bg-red-400 inline-block mr-1"></div>
+                  <div class="w-3 h-3 rounded-full bg-yellow-400 inline-block mr-1"></div>
+                  <div class="w-3 h-3 rounded-full bg-green-400 inline-block mr-1"></div>
                 </div>
                 <span class="text-sm">bash</span>
               </div>
-              <div class="terminal-content p-4">
-                <div class="code-line mb-3 text-green-400">
+              <div class="p-4 min-h-[200px]">
+                <div class="terminal-animation mb-3 text-green-400 opacity-0">
                   $ npx degit paddy-shrp/vue-ts-tailwind my-project
                 </div>
-                <div class="code-line mb-3 text-green-400">$ cd my-project</div>
-                <div class="code-line mb-3 text-green-400">$ npm install</div>
-                <div class="code-line mb-3 text-green-400">$ npm run dev</div>
-                <div class="code-line mb-3 text-gray-400">
+                <div class="terminal-animation mb-3 text-green-400 opacity-0">$ cd my-project</div>
+                <div class="terminal-animation mb-3 text-green-400 opacity-0">$ npm install</div>
+                <div class="terminal-animation mb-3 text-green-400 opacity-0">$ npm run dev</div>
+                <div class="terminal-animation mb-3 text-gray-400 opacity-0">
                   # Local server running at http://localhost:5173
                 </div>
-                <div class="code-line mb-3 text-green-400">$ git init</div>
-                <div class="code-line mb-3 text-green-400">$ git add .</div>
-                <div class="code-line mb-3 text-green-400">$ git commit -m "Initial commit"</div>
-                <div class="code-line mb-3 text-green-400">$ git push origin main</div>
+                <div class="terminal-animation mb-3 text-green-400 opacity-0">$ git init</div>
+                <div class="terminal-animation mb-3 text-green-400 opacity-0">$ git add .</div>
+                <div class="terminal-animation mb-3 text-green-400 opacity-0">$ git commit -m "Initial commit"</div>
+                <div class="terminal-animation mb-3 text-green-400 opacity-0">$ git push origin main</div>
               </div>
             </div>
           </div>
@@ -123,3 +123,13 @@ onMounted(async () => {
   }
 })
 </script>
+
+<style scoped>
+.terminal-animation {
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+</style>
