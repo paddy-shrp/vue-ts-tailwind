@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="bg-gray-50 text-slate-800">
+  <div id="app" class="bg-background text-foreground transition-colors duration-300">
     <!-- Navigation -->
     <Header />
 

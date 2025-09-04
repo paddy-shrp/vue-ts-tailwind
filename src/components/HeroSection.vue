@@ -1,15 +1,25 @@
 <template>
   <section class="relative overflow-hidden">
+    <!-- Dynamic background using theme colors -->
     <div
-      class="absolute inset-0 bg-gradient-to-br from-primary via-purple-600 to-secondary-dark"
+      class="absolute inset-0 transition-all duration-500"
+      :style="{
+        background: isDark 
+          ? 'linear-gradient(to bottom right, var(--color-dark) 0%, var(--color-dark-light) 50%, var(--color-foreground) 100%)'
+          : 'linear-gradient(to bottom right, var(--color-primary) 0%, var(--color-secondary) 50%, var(--color-secondary-dark) 100%)'
+      }"
     ></div>
+    
+    <!-- Pattern overlay that adapts to mode -->
     <div class="absolute inset-0 opacity-40">
       <div
-        class="absolute top-0 left-0 w-full h-full"
-        style="
-          background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0);
-          background-size: 50px 50px;
-        "
+        class="absolute top-0 left-0 w-full h-full transition-all duration-500"
+        :style="{
+          backgroundImage: isDark 
+            ? 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0)'
+            : 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)',
+          backgroundSize: '50px 50px'
+        }"
       ></div>
     </div>
 
@@ -17,25 +27,31 @@
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
       <div class="flex flex-col md:flex-row items-center gap-16">
         <div class="md:w-1/2">
-          <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6 text-white drop-shadow-lg">
+          <h1 
+            class="text-4xl md:text-5xl font-bold leading-tight mb-6 transition-colors duration-500"
+            :class="isDark ? 'text-white drop-shadow-lg' : 'text-white drop-shadow-lg'"
+          >
             Build Professional Frontends Instantly
           </h1>
-          <p class="text-xl mb-8 opacity-90 text-white/90 drop-shadow-md">
+          <p 
+            class="text-xl mb-8 transition-colors duration-500"
+            :class="isDark ? 'text-white/90 drop-shadow-md' : 'text-white/90 drop-shadow-md'"
+          >
             See the complete process of creating stunning frontends with AI tools and deploying them
             instantly. This site demonstrates the Instant Frontend workflow using our Vue 3 +
-            TypeScript + Tailwind template.
+            TypeScript + Tailwind template with built-in dark mode support.
           </p>
           <div class="flex flex-wrap gap-4">
             <a
               href="#process"
-              class="bg-white/20 backdrop-blur-sm text-white font-medium px-6 py-3 rounded-lg hover:bg-white/30 transition-all duration-300 border border-white/30 shadow-lg hover:shadow-xl"
+              class="backdrop-blur-sm font-medium px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl bg-white/20 text-white hover:bg-white/30 border border-white/30"
             >
               See the Process
             </a>
             <a
               href="https://github.com/paddy-shrp/vue-ts-tailwind"
               target="_blank"
-              class="border-2 border-white/50 text-white font-medium px-6 py-3 rounded-lg hover:bg-white/10 transition-all duration-300 flex items-center gap-2 backdrop-blur-sm shadow-lg hover:shadow-xl"
+              class="font-medium px-6 py-3 rounded-lg transition-all duration-300 flex items-center gap-2 backdrop-blur-sm shadow-lg hover:shadow-xl border-2 border-white/50 text-white hover:bg-white/10"
             >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path
@@ -52,62 +68,62 @@
               <!-- Step 1: Generate -->
               <div class="flex items-center space-x-4 group">
                 <div
-                  class="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white font-bold text-lg shadow-2xl aspect-square border border-white/30"
+                  class="backdrop-blur-sm rounded-full flex items-center justify-center font-bold text-lg shadow-2xl aspect-square transition-all duration-300 w-16 h-16 bg-white/10 text-white border border-white/30"
                 >
                   1
                 </div>
                 <div>
-                  <span class="text-white font-semibold text-base block mb-1 drop-shadow-md"
-                    >Generate</span
-                  >
-                  <span class="text-white/80 text-sm drop-shadow-sm"
-                    >Use Deepsite AI to generate your frontend's HTML structure in seconds.</span
-                  >
+                  <span class="font-semibold text-base block mb-1 text-white drop-shadow-md">
+                    Generate
+                  </span>
+                  <span class="text-sm text-white/80 drop-shadow-sm">
+                    Use Deepsite AI to generate your frontend's HTML structure in seconds.
+                  </span>
                 </div>
               </div>
 
               <!-- Arrow -->
               <div class="flex flex-col items-center ml-8">
-                <div class="w-0.5 h-8 bg-white/60 animate-pulse"></div>
+                <div class="w-0.5 h-8 animate-pulse bg-white/60"></div>
               </div>
 
               <!-- Step 2: Develop -->
               <div class="flex items-center space-x-4 group">
                 <div
-                  class="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white font-bold text-lg shadow-2xl aspect-square border border-white/30"
+                  class="backdrop-blur-sm rounded-full flex items-center justify-center font-bold text-lg shadow-2xl aspect-square transition-all duration-300 w-16 h-16 bg-white/10 text-white border border-white/30"
                 >
                   2
                 </div>
                 <div>
-                  <span class="text-white font-semibold text-base block mb-1 drop-shadow-md"
-                    >Develop</span
-                  >
-                  <span class="text-white/80 text-sm drop-shadow-sm"
-                    >Refine, style, and enhance your frontend with Vue 3, TypeScript, and Tailwind
-                    CSS.</span
-                  >
+                  <span class="font-semibold text-base block mb-1 text-white drop-shadow-md">
+                    Develop
+                  </span>
+                  <span class="text-sm text-white/80 drop-shadow-sm">
+                    Refine, style, and enhance your frontend with Vue 3, TypeScript, and Tailwind
+                    CSS.
+                  </span>
                 </div>
               </div>
 
               <!-- Arrow -->
               <div class="flex flex-col items-center ml-8">
-                <div class="w-0.5 h-8 bg-white/60 animate-pulse"></div>
+                <div class="w-0.5 h-8 animate-pulse bg-white/60"></div>
               </div>
 
               <!-- Step 3: Deploy -->
               <div class="flex items-center space-x-4 group">
                 <div
-                  class="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white font-bold text-lg shadow-2xl aspect-square border border-white/30"
+                  class="backdrop-blur-sm rounded-full flex items-center justify-center font-bold text-lg shadow-2xl aspect-square transition-all duration-300 w-16 h-16 bg-white/10 text-white border border-white/30"
                 >
                   3
                 </div>
                 <div>
-                  <span class="text-white font-semibold text-base block mb-1 drop-shadow-md"
-                    >Deploy</span
-                  >
-                  <span class="text-white/80 text-sm drop-shadow-sm"
-                    >Launch your frontend instantly to Vercel or your favorite platform.</span
-                  >
+                  <span class="font-semibold text-base block mb-1 text-white drop-shadow-md">
+                    Deploy
+                  </span>
+                  <span class="text-sm text-white/80 drop-shadow-sm">
+                    Launch your frontend instantly to Vercel or your favorite platform.
+                  </span>
                 </div>
               </div>
             </div>
@@ -117,3 +133,9 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { useDarkMode } from '@/composables/useDarkMode'
+
+const { isDark } = useDarkMode()
+</script>

@@ -46,6 +46,7 @@ src/
 - **Tailwind CSS** for styling
 - **Vue Router** for navigation
 - **Vite** for fast development
+- **Dark mode support** with smooth transitions
 - **Responsive design**
 
 ## 🐳 Docker Support

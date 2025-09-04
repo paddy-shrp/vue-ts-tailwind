@@ -1,24 +1,23 @@
-You are working in a Vue 3 + Vite project. Take the provided static HTML file and do the following:
+You are working in a Vue 3 + Vite project with Tailwind CSS v4 (no config file approach). Take the provided static HTML file and do the following:
 
 1. **Component Extraction**
    - Identify logical sections (e.g., navbar, hero, steps, footer) and extract them into standalone Vue SFCs.
    - Name each component clearly, e.g., `HeroSection.vue`, `StepByStep.vue`, `SiteFooter.vue`.
-   - Move HTML into `<template>` sections, convert inline styles/classes to proper usage with Tailwind or scoped CSS.
+   - Move HTML into `<template>` sections, convert inline styles/classes to proper usage with Tailwind utilities.
    - Use `<script setup>` syntax where applicable.
    - Avoid unnecessary complexity — keep props and reactivity minimal unless clearly needed.
 
-2. **CSS Extraction**
-   - If styles are defined inline or via `<style>` tags in the HTML, extract and place them in either:
-     - Scoped `<style scoped>` blocks inside each Vue component
-     - Or global styles (`src/assets/main.css`) if shared across components
-   - If Tailwind is used, remove redundant custom styles where utility classes suffice.
+2. **Tailwind v4 Theme Integration**
+   - **CRITICAL**: Use Tailwind v4 with NO config file - all theming via `@theme` in `src/assets/main.css`. Use existing theme colors (primary, secondary, background, foreground, surface) with Tailwind utilities like `bg-primary`, `text-foreground`, `border-border` throughout all components.
+   - Extract inline styles to Tailwind utilities, use semantic color tokens for automatic light/dark mode switching, and maintain theme consistency across all components.
 
 3. **Integration**
    - Place all components into `src/components/`
    - In `src/pages/Home.vue`, import and compose the components in the correct layout.
    - Make sure the site works exactly like the original HTML file visually and structurally.
+   - Ensure all components follow the established theme and design system.
 
 4. **Routing**
    - If not already done, add the route to `Home.vue` in `router/index.ts`.
 
-Keep it clean, maintainable, and idiomatic for Vue 3 + Vite. Your goal is to make the project fully modular and ready for dev iteration.
+Keep it clean, maintainable, and idiomatic for Vue 3 + Vite + Tailwind v4. Your goal is to make the project fully modular and ready for dev iteration.

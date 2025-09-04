@@ -1,16 +1,30 @@
 <template>
-  <div class="bg-gray-50 text-slate-800">
-    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-10">
+  <div class="bg-background text-foreground">
+    <nav class="fixed w-full bg-surface-elevated/90 backdrop-blur-sm shadow-sm z-10 border-b border-border">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
           <div class="flex items-center">
             <a href="/" class="block">
-              <div class="bg-gradient-to-r from-primary to-secondary p-1 rounded-lg">
-                <div class="bg-white p-1 rounded-md">
+              <div 
+                class="p-1 rounded-lg transition-all duration-500"
+                :class="isDark 
+                  ? 'bg-gradient-to-r from-white/20 to-white/10 border border-white/30' 
+                  : 'bg-gradient-to-r from-primary to-secondary'"
+              >
+                <div 
+                  class="p-1 rounded-md transition-all duration-500"
+                  :class="isDark 
+                    ? 'bg-transparent' 
+                    : 'bg-surface-elevated'"
+                >
                   <span
-                    class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-xl"
-                    >Instant Frontend</span
+                    class="font-bold text-transparent bg-clip-text text-xl transition-colors duration-500"
+                    :class="isDark 
+                      ? 'bg-gradient-to-r from-white to-white' 
+                      : 'bg-gradient-to-r from-primary to-secondary'"
                   >
+                    Instant Frontend
+                  </span>
                 </div>
               </div>
             </a>
@@ -20,11 +34,12 @@
               to="/"
               :class="{
                 'text-primary font-medium': $route.path === '/',
-                'text-gray-600 hover:text-primary': $route.path !== '/',
+                'text-muted hover:text-primary': $route.path !== '/',
               }"
               >Home</router-link
             >
-            <a href="#process" class="text-gray-600 hover:text-primary transition">Process</a>
+            <a href="#process" class="text-muted hover:text-primary transition">Process</a>
+            <DarkModeToggle />
             <a
               href="https://github.com/paddy-shrp/vue-ts-tailwind"
               target="_blank"
@@ -38,10 +53,11 @@
               Get Template
             </a>
           </div>
-          <div class="md:hidden flex items-center">
+          <div class="md:hidden flex items-center space-x-2">
+            <DarkModeToggle />
             <button
               @click="mobileMenuOpen = !mobileMenuOpen"
-              class="text-gray-600 hover:text-primary"
+              class="text-muted hover:text-primary"
             >
               <i class="fas fa-bars text-xl"></i>
             </button>
@@ -50,7 +66,7 @@
       </div>
 
       <!-- Mobile menu -->
-      <div v-if="mobileMenuOpen" class="md:hidden bg-white shadow-lg">
+      <div v-if="mobileMenuOpen" class="md:hidden bg-surface-elevated shadow-lg border-t border-border">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <router-link
             to="/"
@@ -58,14 +74,14 @@
             class="block px-3 py-2 rounded-md text-base font-medium"
             :class="{
               'text-white bg-primary': $route.path === '/',
-              'text-gray-600 hover:bg-gray-100': $route.path !== '/',
+              'text-muted hover:bg-surface': $route.path !== '/',
             }"
             >Home</router-link
           >
           <a
             href="#process"
             @click="mobileMenuOpen = false"
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100"
+            class="block px-3 py-2 rounded-md text-base font-medium text-muted hover:bg-surface"
             >Process</a
           >
           <a
@@ -88,6 +104,9 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import DarkModeToggle from '@/components/DarkModeToggle.vue'
+import { useDarkMode } from '@/composables/useDarkMode'
 
 const mobileMenuOpen = ref(false)
+const { isDark } = useDarkMode()
 </script>
