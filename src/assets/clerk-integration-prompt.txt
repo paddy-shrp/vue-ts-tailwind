@@ -1,0 +1,29 @@
+# Clerk Authentication Implementation
+
+You are working in a Vue 3 + TypeScript + Vite project with Tailwind CSS v4. Add Clerk authentication with these steps:
+
+## 1. **Setup**
+- Install `@clerk/vue` package
+- Create `.env.local` with `VITE_CLERK_PUBLISHABLE_KEY=pk_test_...`
+- Initialize Clerk in `main.ts` with the publishable key
+
+## 2. **Core Files**
+- **router/index.ts**: Add auth guards for protected routes
+- **composables/useAuth.ts**: Create auth state composable
+
+## 3. **Auth Components** (in `src/components/auth/`)
+- **SignIn.vue**: Use `<SignIn />` component, style with Tailwind theme colors
+- **SignUp.vue**: Use `<SignUp />` component, match SignIn styling  
+- **UserButton.vue**: Use `<UserButton />` component for header
+- **UserProfile.vue**: Use `<UserProfile />` component for profile page
+
+## 4. **Integration**
+- Update `Header.vue` to show UserButton when signed in, Sign In/Sign Up when not
+- Add protected routes like `/dashboard` and `/profile`
+- Style all components with existing Tailwind theme colors (primary, secondary, background, foreground)
+
+## 5. **Requirements**
+- Use Tailwind v4 with NO config file - theme via `@theme` in `src/assets/main.css`
+- Make components responsive and accessible
+- Follow Vue 3 composition API patterns
+- Keep it simple and clean

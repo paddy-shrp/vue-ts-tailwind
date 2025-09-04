@@ -59,6 +59,34 @@
                 <strong>Deploy:</strong> Deploy to
                 <a href="https://vercel.com" class="text-primary hover:underline" target="_blank">Vercel</a>
               </li>
+              <li class="relative">
+                <div class="flex items-center gap-2 mb-2">
+                  <strong>Add Authentication (Optional):</strong>
+                  <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded-full border border-blue-200">
+                    Optional
+                  </span>
+                </div>
+                <p class="text-sm text-muted mb-3">
+                  Enhance your app with Clerk authentication using this integration guide:
+                </p>
+                <div class="mt-3 p-4 bg-surface rounded-lg border-l-4 border-blue-500 border">
+                  <div class="flex justify-between items-center mb-2">
+                    <p class="text-sm font-medium text-foreground">Clerk Integration Guide:</p>
+                    <button @click="copyClerkPrompt"
+                      class="text-xs px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 hover:cursor-pointer transition-colors flex items-center gap-1"
+                      :class="{ 'bg-green-600': clerkCopySuccess }">
+                      <span v-if="clerkCopySuccess">✓ Copied!</span>
+                      <span v-else>Copy</span>
+                    </button>
+                  </div>
+                  <details class="text-sm text-muted">
+                    <summary class="cursor-pointer font-medium text-blue-600 hover:text-blue-700">
+                      Click to expand Clerk integration guide
+                    </summary>
+                    <div class="mt-2 space-y-2 whitespace-pre-line">{{ clerkPrompt }}</div>
+                  </details>
+                </div>
+              </li>
             </ol>
           </div>
           <div class="md:w-1/2 bg-gray-900 text-white">
@@ -99,7 +127,9 @@
 import { ref, onMounted } from 'vue'
 
 const agentPrompt = ref('')
+const clerkPrompt = ref('')
 const copySuccess = ref(false)
+const clerkCopySuccess = ref(false)
 
 const copyAgentPrompt = async () => {
   try {
@@ -113,6 +143,18 @@ const copyAgentPrompt = async () => {
   }
 }
 
+const copyClerkPrompt = async () => {
+  try {
+    await navigator.clipboard.writeText(clerkPrompt.value)
+    clerkCopySuccess.value = true
+    setTimeout(() => {
+      clerkCopySuccess.value = false
+    }, 2000)
+  } catch {
+    // Silently handle copy errors
+  }
+}
+
 onMounted(async () => {
   try {
     const textModule = await import('../assets/agent-prompt.txt?raw')
@@ -120,6 +162,14 @@ onMounted(async () => {
   } catch {
     // Silently handle load errors
     agentPrompt.value = 'Failed to load agent prompt'
+  }
+
+  try {
+    const clerkModule = await import('../assets/clerk-integration-prompt.txt?raw')
+    clerkPrompt.value = clerkModule.default
+  } catch {
+    // Silently handle load errors
+    clerkPrompt.value = 'Failed to load Clerk integration prompt'
   }
 })
 </script>
